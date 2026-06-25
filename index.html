@@ -244,7 +244,8 @@
         }
 
         .skill-card {
-            width: 240px;
+            width: 100%;
+            max-width: 240px;
             height: 140px;
             background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(15px);
@@ -428,15 +429,63 @@
                 0 0 30px rgba(170, 107, 228, 0.4);
         }
 
-
-
-
-
         footer {
             text-align: center;
             padding: 20px;
             background: rgba(255, 255, 255, 0.05);
             color: #94a3b8;
+        }
+
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .firstsection {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .firstsection>div {
+                width: 90%;
+            }
+
+            .leftsection {
+                width: 100%;
+                font-size: 1.8rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
+
+            .experience-container {
+                justify-content: center;
+            }
+
+            .project-container {
+                grid-template-columns: 1fr;
+            }
+
+            .exp-card,
+            .project-card,
+            .skill-card {
+                width: 90%;
+                max-width: 320px;
+            }
+
+            .social-icons {
+                flex-wrap: wrap;
+            }
         }
     </style>
 
